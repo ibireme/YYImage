@@ -8,6 +8,9 @@ YYImage
 
 Image framework for iOS to display/encode/decode animated WebP, APNG, GIF, and more.
 
+![niconiconi~](https://raw.github.com/ibireme/YYImage/master/Demo/YYImageDemo/niconiconi@2x.gif
+)
+
 Features
 ==============
 - Display/encode/decode animated image with these types:<br/>&nbsp;&nbsp;&nbsp;&nbsp;WebP, APNG, GIF.
