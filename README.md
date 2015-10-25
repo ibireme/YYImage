@@ -14,7 +14,7 @@ Image framework for iOS to display/encode/decode animated WebP, APNG, GIF, and m
 Features
 ==============
 - Display/encode/decode animated image with these types:<br/>&nbsp;&nbsp;&nbsp;&nbsp;WebP, APNG, GIF.
-- Display/encode decode still image with these types:<br/>&nbsp;&nbsp;&nbsp;&nbsp;WebP, PNG, GIF, JPEG, JP2, TIFF, BMP, ICO, ICNS.
+- Display/encode/decode still image with these types:<br/>&nbsp;&nbsp;&nbsp;&nbsp;WebP, PNG, GIF, JPEG, JP2, TIFF, BMP, ICO, ICNS.
 - Baseline/progressive/interlaced image decode with these types:<br/>&nbsp;&nbsp;&nbsp;&nbsp;PNG, GIF, JPEG, BMP.
 - Display frame based image animation and sprite sheet animation.
 - Extendable protocol for custom image animation.
@@ -144,6 +144,7 @@ Installation
 	* ImageIO.framework
 	* Accelerate.framework
 	* MobileCoreServices.framework
+	* libz
 4. Add `Vendor/WebP.framework`(static library) to your Xcode project if you want to support webp.
 5. Import `YYImage.h`.
 
