@@ -128,7 +128,7 @@ Installation
 ### Carthage
 
 1. Add `github "ibireme/YYImage"` to your Cartfile.
-2. Run `carthage update` and add the framework to your project.
+2. Run `carthage update --platform ios` and add the framework to your project.
 3. Import \<YYImage/YYImage.h\>
 4. Notice: carthage framework doesn't include webp component, if you want to support webp, use cocoapods or install manually.
 
