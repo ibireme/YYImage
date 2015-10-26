@@ -26,8 +26,8 @@ Usage
 
 ###Display animated image
 	
-	// File: ani@2x.webp
-	UIImage *image = [YYImage imageNamed:@"ani.webp"];
+	// File: ani@3x.gif
+	UIImage *image = [YYImage imageNamed:@"ani.gif"];
 	UIImageView *imageView = [[YYAnimatedImageView alloc] initWithImage:image];
 	[self.view addSubView:imageView];
 
@@ -76,6 +76,8 @@ Usage
 	[imageView startAnimating];
 	// set frame index:
 	imageView.currentAnimatedImageIndex = 12;
+	// get current status
+	image.currentIsPlayingAnimation;
 	
 ###Image decoder
 		
