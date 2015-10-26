@@ -17,8 +17,9 @@ Features
 - Display/encode/decode still image with these types:<br/>&nbsp;&nbsp;&nbsp;&nbsp;WebP, PNG, GIF, JPEG, JP2, TIFF, BMP, ICO, ICNS.
 - Baseline/progressive/interlaced image decode with these types:<br/>&nbsp;&nbsp;&nbsp;&nbsp;PNG, GIF, JPEG, BMP.
 - Display frame based image animation and sprite sheet animation.
+- Fully compatible with UIImage and UIImageView class.
 - Extendable protocol for custom image animation.
-- Dynamic frame buffer for lower memory usage.
+- Dynamic memory buffer for lower memory usage.
 
 Usage
 ==============
