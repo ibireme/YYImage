@@ -6,7 +6,8 @@ YYImage <a href="#中文介绍">中文介绍</a>
 [![Cocoapods](http://img.shields.io/cocoapods/p/YYImage.svg?style=flat)](http://cocoapods.org/?q= YYImage)&nbsp;
 [![Support](https://img.shields.io/badge/support-iOS%206%2B%20-blue.svg?style=flat)](https://www.apple.com/nl/ios/)
 
-Image framework for iOS to display/encode/decode animated WebP, APNG, GIF, and more.
+Image framework for iOS to display/encode/decode animated WebP, APNG, GIF, and more.<br/>
+(It's a component of [YYKit](https://github.com/ibireme/YYKit))
 
 ![niconiconi~](https://raw.github.com/ibireme/YYImage/master/Demo/YYImageDemo/niconiconi@2x.gif
 )
@@ -173,7 +174,8 @@ YYImage is provided under the MIT license. See LICENSE file for details.
 ---
 中文介绍
 ==============
-YYImage: 功能强大的 iOS 图像框架。
+YYImage: 功能强大的 iOS 图像框架。<br/>
+(该项目是 [YYKit](https://github.com/ibireme/YYKit) 组件之一)
 
 
 特性
