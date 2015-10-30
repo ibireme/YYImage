@@ -13,6 +13,8 @@
 
 #if __has_include(<YYImage/YYImage.h>)
 #import <YYImage/YYAnimatedImageView.h>
+#elif __has_include(<YYWebImage/YYImage.h>)
+#import <YYWebImage/YYAnimatedImageView.h>
 #else
 #import "YYAnimatedImageView.h"
 #endif
