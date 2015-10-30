@@ -21,6 +21,7 @@ Features
 - Fully compatible with UIImage and UIImageView class.
 - Extendable protocol for custom image animation.
 - Dynamic memory buffer for lower memory usage.
+- Fully documented.
 
 Usage
 ==============
@@ -190,7 +191,7 @@ YYImage: 功能强大的 iOS 图像框架。<br/>
 - 完全兼容 UIImage 和 UIImageView，使用方便。
 - 保留可扩展的接口，以支持自定义动画。
 - 高效的动态内存缓存管理，以保证高性能低内存的动画播放。
-- 利用 ImageIO 与 Accelerate 实现高性能的图片编码解码。
+- 每个类和方法都有完善的文档注释。
 
 
 用法
