@@ -4,7 +4,8 @@ YYImage <a href="#中文介绍">中文介绍</a>
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)&nbsp;
 [![Cocoapods](http://img.shields.io/cocoapods/v/YYImage.svg?style=flat)](http://cocoapods.org/?q= YYImage)&nbsp;
 [![Cocoapods](http://img.shields.io/cocoapods/p/YYImage.svg?style=flat)](http://cocoapods.org/?q= YYImage)&nbsp;
-[![Support](https://img.shields.io/badge/support-iOS%206%2B%20-blue.svg?style=flat)](https://www.apple.com/nl/ios/)
+[![Support](https://img.shields.io/badge/support-iOS%206%2B%20-blue.svg?style=flat)](https://www.apple.com/nl/ios/)&nbsp;
+[![Build Status](https://travis-ci.org/ibireme/YYImage.svg?branch=master)](https://travis-ci.org/ibireme/YYImage)
 
 Image framework for iOS to display/encode/decode animated WebP, APNG, GIF, and more.<br/>
 (It's a component of [YYKit](https://github.com/ibireme/YYKit))
