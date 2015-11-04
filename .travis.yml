@@ -1,3 +1,7 @@
 language: objective-c
+osx_image: xcode7
 xcode_project: Framework/YYImage.xcodeproj
 xcode_scheme: YYImage
+
+script:
+- xctool -project Framework/YYImage.xcodeproj -scheme YYImage build test CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
