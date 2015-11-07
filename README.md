@@ -150,13 +150,13 @@ Installation
 1. Download all the files in the YYImage subdirectory.
 2. Add the source files to your Xcode project.
 3. Link with required frameworks:
-	* UIKit.framework
-	* CoreFoundation.framework
-	* QuartzCore.framework
-	* AssetsLibrary.framework
-	* ImageIO.framework
-	* Accelerate.framework
-	* MobileCoreServices.framework
+	* UIKit
+	* CoreFoundation
+	* QuartzCore
+	* AssetsLibrary
+	* ImageIO
+	* Accelerate
+	* MobileCoreServices
 	* libz
 4. Add `Vendor/WebP.framework`(static library) to your Xcode project if you want to support webp.
 5. Import `YYImage.h`.
@@ -328,13 +328,13 @@ YYImage: 功能强大的 iOS 图像框架。<br/>
 1. 下载 YYImage 文件夹内的所有内容。
 2. 将 YYModel 内的源文件添加(拖放)到你的工程。
 3. 链接以下 frameworks:
-	* UIKit.framework
-	* CoreFoundation.framework
-	* QuartzCore.framework
-	* AssetsLibrary.framework
-	* ImageIO.framework
-	* Accelerate.framework
-	* MobileCoreServices.framework
+	* UIKit
+	* CoreFoundation
+	* QuartzCore
+	* AssetsLibrary
+	* ImageIO
+	* Accelerate
+	* MobileCoreServices
 	* libz
 4. 如果你需要支持 webp，可以将 `Vendor/WebP.framework`(静态库) 加入你的工程。
 5. 导入 `YYImage.h`。
