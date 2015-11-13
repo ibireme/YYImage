@@ -185,6 +185,8 @@ YYImage is provided under the MIT license. See LICENSE file for details.
 YYImage: 功能强大的 iOS 图像框架。<br/>
 (该项目是 [YYKit](https://github.com/ibireme/YYKit) 组件之一)
 
+![niconiconi~](https://raw.github.com/ibireme/YYImage/master/Demo/YYImageDemo/niconiconi@2x.gif
+)
 
 特性
 ==============
