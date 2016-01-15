@@ -572,7 +572,7 @@ static inline void YYBenchmark(void (^block)(void), void (^complete)(double ms))
     CoverDecodeBlock yyCoverDecoder = ^(NSData *data) {
         @autoreleasepool {
             YYImageDecoder *decoder = [YYImageDecoder decoderWithData:data scale:1];
-            [decoder frameAtIndex:0 decodeForDisplay:YES];;
+            [decoder frameAtIndex:0 decodeForDisplay:YES];
         }
     };
     
