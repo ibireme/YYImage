@@ -328,7 +328,7 @@ YYImage: 功能强大的 iOS 图像框架。<br/>
 ### 手动安装
 
 1. 下载 YYImage 文件夹内的所有内容。
-2. 将 YYModel 内的源文件添加(拖放)到你的工程。
+2. 将 YYImage 内的源文件添加(拖放)到你的工程。
 3. 链接以下 frameworks:
 	* UIKit
 	* CoreFoundation
@@ -353,7 +353,7 @@ YYImage: 功能强大的 iOS 图像框架。<br/>
 
 许可证
 ==============
-YYModel 使用 MIT 许可证，详情见 LICENSE 文件。
+YYImage 使用 MIT 许可证，详情见 LICENSE 文件。
 
 
 相关链接
