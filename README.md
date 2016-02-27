@@ -133,17 +133,17 @@ Installation
 ### CocoaPods
 
 1. Update cocoapods to the latest version.
-1. Add `pod "YYImage"` to your Podfile.
-2. Run `pod install` or `pod update`.
-3. Import \<YYImage/YYImage.h\>
-
+2. Add `pod "YYImage"` to your Podfile.
+3. Run `pod install` or `pod update`.
+4. Import \<YYImage/YYImage.h\>.
+5. Notice: it doesn't include WebP subspec by default, if you want to support WebP format, use `pod 'YYImage', :subspecs => ['Core', 'WebP']` in your Podfile.
 
 ### Carthage
 
 1. Add `github "ibireme/YYImage"` to your Cartfile.
 2. Run `carthage update --platform ios` and add the framework to your project.
-3. Import \<YYImage/YYImage.h\>
-4. Notice: carthage framework doesn't include webp component, if you want to support webp, use cocoapods or install manually.
+3. Import \<YYImage/YYImage.h\>.
+4. Notice: carthage framework doesn't include WebP component, if you want to support WebP format, use cocoapods or install manually.
 
 ### Manually
 
@@ -158,8 +158,8 @@ Installation
 	* Accelerate
 	* MobileCoreServices
 	* libz
-4. Add `Vendor/WebP.framework`(static library) to your Xcode project if you want to support webp.
-5. Import `YYImage.h`.
+4. Import `YYImage.h`.
+5. Notice: if you want to support WebP format, you may add `Vendor/WebP.framework`(static library) to your Xcode project.
 
 
 Documentation
@@ -313,17 +313,17 @@ YYImage: 功能强大的 iOS 图像框架。<br/>
 ### CocoaPods
 
 1. 将 cocoapods 更新至最新版本.
-1. 在 Podfile 中添加 `pod "YYImage"`。
-2. 执行 `pod install` 或 `pod update`。
-3. 导入 \<YYImage/YYImage.h\>。
-
+2. 在 Podfile 中添加 `pod "YYImage"`。
+3. 执行 `pod install` 或 `pod update`。
+4. 导入 \<YYImage/YYImage.h\>。
+5. 注意：pod 配置并没有包含 WebP 组件, 如果你需要支持 WebP，可以在 Poefile 中添加 `pod 'YYImage', :subspecs => ['Core', 'WebP']`。
 
 ### Carthage
 
 1. 在 Cartfile 中添加 `github "ibireme/YYImage"`。
 2. 执行 `carthage update --platform ios` 并将生成的 framework 添加到你的工程。
 3. 导入 \<YYImage/YYImage.h\>。
-4. 注意: carthage framework 并没有包含 webp 组件。如果你需要支持 webp，可以用 CocoaPods 安装，或者手动安装。
+4. 注意：carthage framework 并没有包含 WebP 组件。如果你需要支持 WebP，可以用 CocoaPods 安装，或者手动安装。
 
 ### 手动安装
 
@@ -338,8 +338,8 @@ YYImage: 功能强大的 iOS 图像框架。<br/>
 	* Accelerate
 	* MobileCoreServices
 	* libz
-4. 如果你需要支持 webp，可以将 `Vendor/WebP.framework`(静态库) 加入你的工程。
-5. 导入 `YYImage.h`。
+4. 导入 `YYImage.h`。
+5. 注意：如果你需要支持 WebP，可以将 `Vendor/WebP.framework`(静态库) 加入你的工程。
 
 文档
 ==============
