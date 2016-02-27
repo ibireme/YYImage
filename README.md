@@ -133,17 +133,17 @@ Installation
 ### CocoaPods
 
 1. Update cocoapods to the latest version.
-2. Add `pod "YYImage"` to your Podfile.
+2. Add `pod 'YYImage'` to your Podfile.
 3. Run `pod install` or `pod update`.
 4. Import \<YYImage/YYImage.h\>.
-5. Notice: it doesn't include WebP subspec by default, if you want to support WebP format, use `pod 'YYImage', :subspecs => ['Core', 'WebP']` in your Podfile.
+5. Notice: it doesn't include WebP subspec by default, if you want to support WebP format, you may add `pod 'YYImage/WebP'` to your Podfile.
 
 ### Carthage
 
 1. Add `github "ibireme/YYImage"` to your Cartfile.
 2. Run `carthage update --platform ios` and add the framework to your project.
 3. Import \<YYImage/YYImage.h\>.
-4. Notice: carthage framework doesn't include WebP component, if you want to support WebP format, use cocoapods or install manually.
+4. Notice: carthage framework doesn't include WebP component, if you want to support WebP format, use CocoaPods or install manually.
 
 ### Manually
 
@@ -170,7 +170,7 @@ You can also install documentation locally using [appledoc](https://github.com/t
 
 Requirements
 ==============
-This library requires a deployment target of iOS 6.0 or greater.
+This library requires `iOS 6.0+` and `Xcode 7.0+`.
 
 
 License
@@ -313,10 +313,10 @@ YYImage: 功能强大的 iOS 图像框架。<br/>
 ### CocoaPods
 
 1. 将 cocoapods 更新至最新版本.
-2. 在 Podfile 中添加 `pod "YYImage"`。
+2. 在 Podfile 中添加 `pod 'YYImage'`。
 3. 执行 `pod install` 或 `pod update`。
 4. 导入 \<YYImage/YYImage.h\>。
-5. 注意：pod 配置并没有包含 WebP 组件, 如果你需要支持 WebP，可以在 Poefile 中添加 `pod 'YYImage', :subspecs => ['Core', 'WebP']`。
+5. 注意：pod 配置并没有包含 WebP 组件, 如果你需要支持 WebP，可以在 Podfile 中添加 `pod 'YYImage/WebP'`。
 
 ### Carthage
 
@@ -346,9 +346,9 @@ YYImage: 功能强大的 iOS 图像框架。<br/>
 你可以在 [CocoaDocs](http://cocoadocs.org/docsets/YYImage/) 查看在线 API 文档，也可以用 [appledoc](https://github.com/tomaz/appledoc) 本地生成文档。
 
 
-关于
+系统要求
 ==============
-该项目最低支持 iOS 6.0。
+该项目最低支持 `iOS 6.0` 和 `Xcode 7.0`。
 
 
 许可证
