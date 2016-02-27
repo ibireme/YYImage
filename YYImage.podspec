@@ -11,6 +11,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => 'https://github.com/ibireme/YYImage.git', :tag => s.version.to_s }
   
   s.requires_arc = true
+  s.default_subspec = 'Core'
   
   s.libraries = 'z'
   s.frameworks = 'UIKit', 'CoreFoundation', 'QuartzCore', 'AssetsLibrary', 'ImageIO', 'Accelerate', 'MobileCoreServices'
