@@ -1973,19 +1973,19 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
         if (_type == YYImageTypePNG) { // use custom apng decoder and ignore multi-frame
             _frameCount = 1;
         }
-      if (_type == YYImageTypeGIF) { // get gif loop count
-        CFDictionaryRef properties = CGImageSourceCopyProperties(_source, NULL);
-        if (properties) {
-          CFDictionaryRef gif = CFDictionaryGetValue(properties, kCGImagePropertyGIFDictionary);
-          if (gif) {
-            CFTypeRef loop = CFDictionaryGetValue(gif, kCGImagePropertyGIFLoopCount);
-            if (loop) CFNumberGetValue(loop, kCFNumberNSIntegerType, &_loopCount);
-          }
-          CFRelease(properties);
+        if (_type == YYImageTypeGIF) { // get gif loop count
+            CFDictionaryRef properties = CGImageSourceCopyProperties(_source, NULL);
+            if (properties) {
+                CFDictionaryRef gif = CFDictionaryGetValue(properties, kCGImagePropertyGIFDictionary);
+                if (gif) {
+                    CFTypeRef loop = CFDictionaryGetValue(gif, kCGImagePropertyGIFLoopCount);
+                    if (loop) CFNumberGetValue(loop, kCFNumberNSIntegerType, &_loopCount);
+                }
+                CFRelease(properties);
+            }
         }
-      }
     }
-  
+
     /*
      ICO, GIF, APNG may contains multi-frame.
      */
