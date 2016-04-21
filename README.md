@@ -19,9 +19,9 @@ Features
 - Display/encode/decode still image with these types:<br/>&nbsp;&nbsp;&nbsp;&nbsp;WebP, PNG, GIF, JPEG, JP2, TIFF, BMP, ICO, ICNS.
 - Baseline/progressive/interlaced image decode with these types:<br/>&nbsp;&nbsp;&nbsp;&nbsp;PNG, GIF, JPEG, BMP.
 - Display frame based image animation and sprite sheet animation.
+- Dynamic memory buffer for lower memory usage.
 - Fully compatible with UIImage and UIImageView class.
 - Extendable protocol for custom image animation.
-- Dynamic memory buffer for lower memory usage.
 - Fully documented.
 
 Usage
@@ -136,7 +136,7 @@ Installation
 2. Add `pod 'YYImage'` to your Podfile.
 3. Run `pod install` or `pod update`.
 4. Import \<YYImage/YYImage.h\>.
-5. Notice: it doesn't include WebP subspec by default, if you want to support WebP format, you may add `pod 'YYImage/WebP'` to your Podfile.
+5. Notice: it doesn't include WebP subspec by default, if you want to support WebP format, you may add `pod 'YYImage/WebP'` to your Podfile. You may call `YYImageWebPAvailable()` to check whether the WebP subspec is installed correctly.
 
 ### Carthage
 
@@ -159,7 +159,7 @@ Installation
 	* MobileCoreServices
 	* libz
 4. Import `YYImage.h`.
-5. Notice: if you want to support WebP format, you may add `Vendor/WebP.framework`(static library) to your Xcode project.
+5. Notice: if you want to support WebP format, you may add `Vendor/WebP.framework`(static library) to your Xcode project. You may call `YYImageWebPAvailable()` to check whether the WebP library is installed correctly.
 
 
 Documentation
@@ -197,9 +197,9 @@ YYImage: 功能强大的 iOS 图像框架。<br/>
 - 支持以下类型图片的渐进式/逐行扫描/隔行扫描解码:<br/>
   &nbsp;&nbsp;&nbsp;&nbsp;PNG, GIF, JPEG, BMP。
 - 支持多张图片构成的帧动画播放，支持单张图片的 sprite sheet 动画。
+- 高效的动态内存缓存管理，以保证高性能低内存的动画播放。
 - 完全兼容 UIImage 和 UIImageView，使用方便。
 - 保留可扩展的接口，以支持自定义动画。
-- 高效的动态内存缓存管理，以保证高性能低内存的动画播放。
 - 每个类和方法都有完善的文档注释。
 
 
@@ -316,7 +316,7 @@ YYImage: 功能强大的 iOS 图像框架。<br/>
 2. 在 Podfile 中添加 `pod 'YYImage'`。
 3. 执行 `pod install` 或 `pod update`。
 4. 导入 \<YYImage/YYImage.h\>。
-5. 注意：pod 配置并没有包含 WebP 组件, 如果你需要支持 WebP，可以在 Podfile 中添加 `pod 'YYImage/WebP'`。
+5. 注意：pod 配置并没有包含 WebP 组件, 如果你需要支持 WebP，可以在 Podfile 中添加 `pod 'YYImage/WebP'`。你可以调用 `YYImageWebPAvailable()` 来检查一下 WebP 组件是否被正确安装。
 
 ### Carthage
 
@@ -339,7 +339,7 @@ YYImage: 功能强大的 iOS 图像框架。<br/>
 	* MobileCoreServices
 	* libz
 4. 导入 `YYImage.h`。
-5. 注意：如果你需要支持 WebP，可以将 `Vendor/WebP.framework`(静态库) 加入你的工程。
+5. 注意：如果你需要支持 WebP，可以将 `Vendor/WebP.framework`(静态库) 加入你的工程。你可以调用 `YYImageWebPAvailable()` 来检查一下 WebP 组件是否被正确安装。
 
 文档
 ==============
