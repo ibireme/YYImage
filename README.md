@@ -163,10 +163,12 @@ Installation
 
 FAQ
 ==============
-Q: Why I can't display WebP image?
+_Q: Why I can't display WebP image?_
+
 A: Make sure you added the `WebP.framework` in your project. You may call `YYImageWebPAvailable()` to check whether the WebP subspec is installed correctly.
 
-Q: Why I can't play APNG image?
+_Q: Why I can't play APNG image?_
+
 A: You should disable the `Compress PNG Files` and `Remove Text Metadata From PNG Files` in your project's build settings. Or you can rename your APNG file's extension name with `apng`.
 
 Documentation
@@ -351,10 +353,12 @@ YYImage: 功能强大的 iOS 图像框架。<br/>
 
 常见问题
 ==============
-Q: 为什么我不能显示 WebP 图片？
+_Q: 为什么我不能显示 WebP 图片？_
+
 A: 确保 `WebP.framework` 已经被添加到你的工程内了。你可以调用 `YYImageWebPAvailable()` 来检查一下 WebP 组件是否被正确安装。
 
-Q: 为什么我不能播放 APNG 动画？
+_Q: 为什么我不能播放 APNG 动画？_
+
 A: 你应该禁用 Build Settings 中的 `Compress PNG Files` 和 `Remove Text Metadata From PNG Files`. 或者你也可以把 APNG 文件的扩展名改为`apng`.
 
 文档
