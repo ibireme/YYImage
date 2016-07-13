@@ -167,7 +167,7 @@ _Q: Why I can't display WebP image?_
 
 A: Make sure you added the `WebP.framework` in your project. You may call `YYImageWebPAvailable()` to check whether the WebP subspec is installed correctly.
 
-_Q: Why I can't play APNG image?_
+_Q: Why I can't play APNG animation?_
 
 A: You should disable the `Compress PNG Files` and `Remove Text Metadata From PNG Files` in your project's build settings. Or you can rename your APNG file's extension name with `apng`.
 
