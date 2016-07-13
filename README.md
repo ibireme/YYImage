@@ -85,7 +85,7 @@ Usage
 ###Image decoder
 		
 	// Decode single frame:
-	NSData *data = [NSData dataWithContentOfFile:@"/tmp/image.webp"];
+	NSData *data = [NSData dataWithContentsOfFile:@"/tmp/image.webp"];
 	YYImageDecoder *decoder = [YYImageDecoder decoderWithData:data scale:2.0];
 	UIImage image = [decoder frameAtIndex:0 decodeForDisplay:YES].image;
 	
@@ -136,7 +136,7 @@ Installation
 2. Add `pod 'YYImage'` to your Podfile.
 3. Run `pod install` or `pod update`.
 4. Import \<YYImage/YYImage.h\>.
-5. Notice: it doesn't include WebP subspec by default, if you want to support WebP format, you may add `pod 'YYImage/WebP'` to your Podfile. You may call `YYImageWebPAvailable()` to check whether the WebP subspec is installed correctly.
+5. Notice: it doesn't include WebP subspec by default, if you want to support WebP format, you may add `pod 'YYImage/WebP'` to your Podfile.
 
 ### Carthage
 
@@ -159,13 +159,21 @@ Installation
 	* MobileCoreServices
 	* libz
 4. Import `YYImage.h`.
-5. Notice: if you want to support WebP format, you may add `Vendor/WebP.framework`(static library) to your Xcode project. You may call `YYImageWebPAvailable()` to check whether the WebP library is installed correctly.
+5. Notice: if you want to support WebP format, you may add `Vendor/WebP.framework`(static library) to your Xcode project.
 
+FAQ
+==============
+Q: Why I can't display WebP image?
+A: Make sure you added the `WebP.framework` in your project. You may call `YYImageWebPAvailable()` to check whether the WebP subspec is installed correctly.
+
+Q: Why I can't play APNG image?
+A: You should disable the `Compress PNG Files` and `Remove Text Metadata From PNG Files` in your project's build settings. Or you can rename your APNG file's extension name with `apng`.
 
 Documentation
 ==============
 Full API documentation is available on [CocoaDocs](http://cocoadocs.org/docsets/YYImage/).<br/>
 You can also install documentation locally using [appledoc](https://github.com/tomaz/appledoc).
+
 
 
 Requirements
@@ -265,7 +273,7 @@ YYImage: 功能强大的 iOS 图像框架。<br/>
 ###图片解码
 		
 	// 解码单帧图片:
-	NSData *data = [NSData dataWithContentOfFile:@"/tmp/image.webp"];
+	NSData *data = [NSData dataWithContentsOfFile:@"/tmp/image.webp"];
 	YYImageDecoder *decoder = [YYImageDecoder decoderWithData:data scale:2.0];
 	UIImage image = [decoder frameAtIndex:0 decodeForDisplay:YES].image;
 	
@@ -316,7 +324,7 @@ YYImage: 功能强大的 iOS 图像框架。<br/>
 2. 在 Podfile 中添加 `pod 'YYImage'`。
 3. 执行 `pod install` 或 `pod update`。
 4. 导入 \<YYImage/YYImage.h\>。
-5. 注意：pod 配置并没有包含 WebP 组件, 如果你需要支持 WebP，可以在 Podfile 中添加 `pod 'YYImage/WebP'`。你可以调用 `YYImageWebPAvailable()` 来检查一下 WebP 组件是否被正确安装。
+5. 注意：pod 配置并没有包含 WebP 组件, 如果你需要支持 WebP，可以在 Podfile 中添加 `pod 'YYImage/WebP'`。
 
 ### Carthage
 
@@ -339,7 +347,15 @@ YYImage: 功能强大的 iOS 图像框架。<br/>
 	* MobileCoreServices
 	* libz
 4. 导入 `YYImage.h`。
-5. 注意：如果你需要支持 WebP，可以将 `Vendor/WebP.framework`(静态库) 加入你的工程。你可以调用 `YYImageWebPAvailable()` 来检查一下 WebP 组件是否被正确安装。
+5. 注意：如果你需要支持 WebP，可以将 `Vendor/WebP.framework`(静态库) 加入你的工程。
+
+常见问题
+==============
+Q: 为什么我不能显示 WebP 图片？
+A: 确保 `WebP.framework` 已经被添加到你的工程内了。你可以调用 `YYImageWebPAvailable()` 来检查一下 WebP 组件是否被正确安装。
+
+Q: 为什么我不能播放 APNG 动画？
+A: 你应该禁用 Build Settings 中的 `Compress PNG Files` 和 `Remove Text Metadata From PNG Files`. 或者你也可以把 APNG 文件的扩展名改为`apng`.
 
 文档
 ==============
