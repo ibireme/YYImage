@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		D9D41AE91BD1033700CD8EBF /* YYAnimatedImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = D9D41ACF1BD1033700CD8EBF /* YYAnimatedImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D9D41AEA1BD1033700CD8EBF /* YYAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D41AD01BD1033700CD8EBF /* YYAnimatedImageView.m */; settings = {ASSET_TAGS = (); }; };
+		D9D41AEA1BD1033700CD8EBF /* YYAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D41AD01BD1033700CD8EBF /* YYAnimatedImageView.m */; };
 		D9D41AEB1BD1033700CD8EBF /* YYFrameImage.h in Headers */ = {isa = PBXBuildFile; fileRef = D9D41AD11BD1033700CD8EBF /* YYFrameImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D9D41AEC1BD1033700CD8EBF /* YYFrameImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D41AD21BD1033700CD8EBF /* YYFrameImage.m */; settings = {ASSET_TAGS = (); }; };
+		D9D41AEC1BD1033700CD8EBF /* YYFrameImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D41AD21BD1033700CD8EBF /* YYFrameImage.m */; };
 		D9D41AED1BD1033700CD8EBF /* YYImage.h in Headers */ = {isa = PBXBuildFile; fileRef = D9D41AD31BD1033700CD8EBF /* YYImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D9D41AEE1BD1033700CD8EBF /* YYImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D41AD41BD1033700CD8EBF /* YYImage.m */; settings = {ASSET_TAGS = (); }; };
+		D9D41AEE1BD1033700CD8EBF /* YYImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D41AD41BD1033700CD8EBF /* YYImage.m */; };
 		D9D41AF11BD1033700CD8EBF /* YYImageCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = D9D41AD71BD1033700CD8EBF /* YYImageCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D9D41AF21BD1033700CD8EBF /* YYImageCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D41AD81BD1033700CD8EBF /* YYImageCoder.m */; settings = {ASSET_TAGS = (); }; };
+		D9D41AF21BD1033700CD8EBF /* YYImageCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D41AD81BD1033700CD8EBF /* YYImageCoder.m */; };
 		D9D41AF31BD1033700CD8EBF /* YYSpriteSheetImage.h in Headers */ = {isa = PBXBuildFile; fileRef = D9D41AD91BD1033700CD8EBF /* YYSpriteSheetImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D9D41AF41BD1033700CD8EBF /* YYSpriteSheetImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D41ADA1BD1033700CD8EBF /* YYSpriteSheetImage.m */; settings = {ASSET_TAGS = (); }; };
+		D9D41AF41BD1033700CD8EBF /* YYSpriteSheetImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D41ADA1BD1033700CD8EBF /* YYSpriteSheetImage.m */; };
 		D9D41AFB1BD10CE700CD8EBF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9D41AFA1BD10CE700CD8EBF /* UIKit.framework */; };
 		D9D41AFD1BD10CEC00CD8EBF /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9D41AFC1BD10CEC00CD8EBF /* CoreFoundation.framework */; };
 		D9D41AFF1BD10CF200CD8EBF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9D41AFE1BD10CF200CD8EBF /* QuartzCore.framework */; };
@@ -162,7 +162,7 @@
 		D9D41AAD1BD102F300CD8EBF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = ibireme;
 				TargetAttributes = {
 					D9D41AB51BD102F300CD8EBF = {
@@ -226,8 +226,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -250,7 +252,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -273,8 +275,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -291,7 +295,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -304,6 +308,7 @@
 		D9D41ABF1BD102F300CD8EBF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -321,6 +326,7 @@
 		D9D41AC01BD102F300CD8EBF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
