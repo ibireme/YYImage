@@ -1241,9 +1241,11 @@ CFDataRef YYCGImageCreateEncodedWebPData(CGImageRef imageRef, BOOL lossless, CGF
     if (width == 0 || width > WEBP_MAX_DIMENSION) return nil;
     if (height == 0 || height > WEBP_MAX_DIMENSION) return nil;
     
-    vImage_Buffer buffer = {0};
-    if(!YYCGImageDecodeToBitmapBufferWith32BitFormat(imageRef, &buffer, kCGImageAlphaLast | kCGBitmapByteOrderDefault)) return nil;
     
+    CGDataProviderRef webPDataProviderRef = CGImageGetDataProvider(imageRef);
+    CFDataRef webPImageDatRef = CGDataProviderCopyData(webPDataProviderRef);
+    uint8_t *webPImageData = (uint8_t *)CFDataGetBytePtr(webPImageDatRef);
+    size_t webPBytesPerRow = CGImageGetBytesPerRow(imageRef);
     WebPConfig config = {0};
     WebPPicture picture = {0};
     WebPMemoryWriter writer = {0};
@@ -1278,11 +1280,11 @@ CFDataRef YYCGImageCreateEncodedWebPData(CGImageRef imageRef, BOOL lossless, CGF
     
     if (!WebPPictureInit(&picture)) goto fail;
     pictureNeedFree = YES;
-    picture.width = (int)buffer.width;
-    picture.height = (int)buffer.height;
+    picture.width = (int) width;
+    picture.height = (int)height;
     picture.use_argb = lossless;
-    if(!WebPPictureImportRGBA(&picture, buffer.data, (int)buffer.rowBytes)) goto fail;
     
+    if(!WebPPictureImportRGBA(&picture, webPImageData, (int)webPBytesPerRow)) goto fail;
     WebPMemoryWriterInit(&writer);
     picture.writer = WebPMemoryWrite;
     picture.custom_ptr = &writer;
@@ -1291,11 +1293,11 @@ CFDataRef YYCGImageCreateEncodedWebPData(CGImageRef imageRef, BOOL lossless, CGF
     webpData = CFDataCreate(CFAllocatorGetDefault(), writer.mem, writer.size);
     free(writer.mem);
     WebPPictureFree(&picture);
-    free(buffer.data);
+    free(webPImageData);
     return webpData;
-    
-fail:
-    if (buffer.data) free(buffer.data);
+
+fail:    
+    if (webPImageData) free(webPImageData);
     if (pictureNeedFree) WebPPictureFree(&picture);
     return nil;
 }
