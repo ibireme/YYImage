@@ -124,7 +124,7 @@ typedef NS_ENUM(NSUInteger, YYAnimatedImageType) {
     @package
     UIImage <YYAnimatedImage> *_curAnimatedImage;
     
-    dispatch_once_t _onceToken;
+    
     dispatch_semaphore_t _lock; ///< lock for _buffer
     NSOperationQueue *_requestQueue; ///< image request queue, serial
     
@@ -231,7 +231,8 @@ typedef NS_ENUM(NSUInteger, YYAnimatedImageType) {
 
 // init the animated params.
 - (void)resetAnimated {
-    dispatch_once(&_onceToken, ^{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
         _lock = dispatch_semaphore_create(1);
         _buffer = [NSMutableDictionary new];
         _requestQueue = [[NSOperationQueue alloc] init];
