@@ -27,7 +27,7 @@ Features
 Usage
 ==============
 
-###Display animated image
+### Display animated image
 	
 	// File: ani@3x.gif
 	UIImage *image = [YYImage imageNamed:@"ani.gif"];
@@ -35,7 +35,7 @@ Usage
 	[self.view addSubview:imageView];
 
 
-###Display frame animation
+### Display frame animation
 	
 	// Files: frame1.png, frame2.png, frame3.png
 	NSArray *paths = @[@"/ani/frame1.png", @"/ani/frame2.png", @"/ani/frame3.png"];
@@ -44,7 +44,7 @@ Usage
 	UIImageView *imageView = [YYAnimatedImageView alloc] initWithImage:image];
 	[self.view addSubview:imageView];
 
-###Display sprite sheet animation
+### Display sprite sheet animation
 
 	// 8 * 12 sprites in a single sheet image
 	UIImage *spriteSheet = [UIImage imageNamed:@"sprite-sheet"];
@@ -70,7 +70,7 @@ Usage
 	imageView.image = sprite;
 	[self.view addSubview:imageView];
 
-###Animation control
+### Animation control
 	
 	YYAnimatedImageView *imageView = ...;
 	// pause:
@@ -82,7 +82,7 @@ Usage
 	// get current status
 	image.currentIsPlayingAnimation;
 	
-###Image decoder
+### Image decoder
 		
 	// Decode single frame:
 	NSData *data = [NSData dataWithContentsOfFile:@"/tmp/image.webp"];
@@ -104,7 +104,7 @@ Usage
 	UIImage image = [decoder frameAtIndex:0 decodeForDisplay:YES].image;
 	// final display...
 
-###Image encoder
+### Image encoder
 	
 	// Encode still image:
 	YYImageEncoder *jpegEncoder = [[YYImageEncoder alloc] initWithType:YYImageTypeJPEG];
@@ -120,7 +120,7 @@ Usage
 	[webpEncoder addImage:image2 duration:0.2];
 	NSData webpData = [webpEncoder encode];
 
-###Image type detection
+### Image type detection
 
 	// Get image type from image data
 	YYImageType type = YYImageDetectType(data); 
@@ -216,7 +216,7 @@ YYImage: 功能强大的 iOS 图像框架。<br/>
 用法
 ==============
 
-###显示动画类型的图片
+### 显示动画类型的图片
 	
 	// 文件: ani@3x.gif
 	UIImage *image = [YYImage imageNamed:@"ani.gif"];
@@ -224,7 +224,7 @@ YYImage: 功能强大的 iOS 图像框架。<br/>
 	[self.view addSubview:imageView];
 
 
-###播放帧动画
+### 播放帧动画
 	
 	// 文件: frame1.png, frame2.png, frame3.png
 	NSArray *paths = @[@"/ani/frame1.png", @"/ani/frame2.png", @"/ani/frame3.png"];
@@ -233,7 +233,7 @@ YYImage: 功能强大的 iOS 图像框架。<br/>
 	UIImageView *imageView = [YYAnimatedImageView alloc] initWithImage:image];
 	[self.view addSubview:imageView];
 
-###播放 sprite sheet 动画
+### 播放 sprite sheet 动画
 
 	// 8 * 12 sprites in a single sheet image
 	UIImage *spriteSheet = [UIImage imageNamed:@"sprite-sheet"];
@@ -259,7 +259,7 @@ YYImage: 功能强大的 iOS 图像框架。<br/>
 	imageView.image = sprite;
 	[self.view addSubview:imageView];
 
-###动画播放控制
+### 动画播放控制
 	
 	YYAnimatedImageView *imageView = ...;
 	// 暂停:
@@ -272,7 +272,7 @@ YYImage: 功能强大的 iOS 图像框架。<br/>
 	image.currentIsPlayingAnimation;
 	//上面两个属性都支持 KVO。
 	
-###图片解码
+### 图片解码
 		
 	// 解码单帧图片:
 	NSData *data = [NSData dataWithContentsOfFile:@"/tmp/image.webp"];
@@ -294,7 +294,7 @@ YYImage: 功能强大的 iOS 图像框架。<br/>
 	UIImage image = [decoder frameAtIndex:0 decodeForDisplay:YES].image;
 	// final display...
 
-###图片编码
+### 图片编码
 	
 	// 编码静态图 (支持各种常见图片格式):
 	YYImageEncoder *jpegEncoder = [[YYImageEncoder alloc] initWithType:YYImageTypeJPEG];
@@ -310,7 +310,7 @@ YYImage: 功能强大的 iOS 图像框架。<br/>
 	[webpEncoder addImage:image2 duration:0.2];
 	NSData webpData = [webpEncoder encode];
 	
-###图片类型探测
+### 图片类型探测
 
 	// 获取图片类型
 	YYImageType type = YYImageDetectType(data); 
