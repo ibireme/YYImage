@@ -32,7 +32,7 @@ Usage
 	// File: ani@3x.gif
 	UIImage *image = [YYImage imageNamed:@"ani.gif"];
 	UIImageView *imageView = [[YYAnimatedImageView alloc] initWithImage:image];
-	[self.view addSubView:imageView];
+	[self.view addSubview:imageView];
 
 
 ###Display frame animation
@@ -42,7 +42,7 @@ Usage
 	NSArray *times = @[@0.1, @0.2, @0.1];
 	UIImage *image = [YYFrameImage alloc] initWithImagePaths:paths frameDurations:times repeats:YES];
 	UIImageView *imageView = [YYAnimatedImageView alloc] initWithImage:image];
-	[self.view addSubView:imageView];
+	[self.view addSubview:imageView];
 
 ###Display sprite sheet animation
 
@@ -68,7 +68,7 @@ Usage
 	YYAnimatedImageView *imageView = [YYAnimatedImageView new];
 	imageView.size = CGSizeMake(img.size.width / 8, img.size.height / 12);
 	imageView.image = sprite;
-	[self.view addSubView:imageView];
+	[self.view addSubview:imageView];
 
 ###Animation control
 	
@@ -221,7 +221,7 @@ YYImage: 功能强大的 iOS 图像框架。<br/>
 	// 文件: ani@3x.gif
 	UIImage *image = [YYImage imageNamed:@"ani.gif"];
 	UIImageView *imageView = [[YYAnimatedImageView alloc] initWithImage:image];
-	[self.view addSubView:imageView];
+	[self.view addSubview:imageView];
 
 
 ###播放帧动画
@@ -231,7 +231,7 @@ YYImage: 功能强大的 iOS 图像框架。<br/>
 	NSArray *times = @[@0.1, @0.2, @0.1];
 	UIImage *image = [YYFrameImage alloc] initWithImagePaths:paths frameDurations:times repeats:YES];
 	UIImageView *imageView = [YYAnimatedImageView alloc] initWithImage:image];
-	[self.view addSubView:imageView];
+	[self.view addSubview:imageView];
 
 ###播放 sprite sheet 动画
 
@@ -257,7 +257,7 @@ YYImage: 功能强大的 iOS 图像框架。<br/>
 	YYAnimatedImageView *imageView = [YYAnimatedImageView new];
 	imageView.size = CGSizeMake(img.size.width / 8, img.size.height / 12);
 	imageView.image = sprite;
-	[self.view addSubView:imageView];
+	[self.view addSubview:imageView];
 
 ###动画播放控制
 	
