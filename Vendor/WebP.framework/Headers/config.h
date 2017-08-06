@@ -78,7 +78,7 @@
 #define PACKAGE_NAME "libwebp"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "libwebp 0.5.0"
+#define PACKAGE_STRING "libwebp 0.6.0"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "libwebp"
@@ -87,7 +87,7 @@
 #define PACKAGE_URL "http://developers.google.com/speed/webp"
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "0.5.0"
+#define PACKAGE_VERSION "0.6.0"
 
 /* Define to necessary symbol if this constant uses a non-standard name on
    your system. */
@@ -97,13 +97,10 @@
 #define STDC_HEADERS 1
 
 /* Version number of package */
-#define VERSION "0.5.0"
+#define VERSION "0.6.0"
 
 /* Enable experimental code */
 /* #undef WEBP_EXPERIMENTAL_FEATURES */
-
-/* Define to 1 to force aligned memory operations */
-/* #undef WEBP_FORCE_ALIGNED */
 
 /* Set to 1 if AVX2 is supported */
 /* #undef WEBP_HAVE_AVX2 */
@@ -116,6 +113,12 @@
 
 /* Set to 1 if JPEG library is installed */
 /* #undef WEBP_HAVE_JPEG */
+
+/* Set to 1 if NEON is supported */
+/* #undef WEBP_HAVE_NEON */
+
+/* Set to 1 if runtime detection of NEON is enabled */
+/* #undef WEBP_HAVE_NEON_RTCD */
 
 /* Set to 1 if PNG library is installed */
 /* #undef WEBP_HAVE_PNG */

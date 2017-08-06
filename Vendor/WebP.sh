@@ -42,9 +42,6 @@ LIBLIST=''
 if [[ -z "${SDK}" ]]; then
   echo "iOS SDK not available"
   exit 1
-elif [[ ${SDK} < 6.0 ]]; then
-  echo "You need iOS SDK version 6.0 or above"
-  exit 1
 else
   echo "iOS SDK Version ${SDK}"
 fi
