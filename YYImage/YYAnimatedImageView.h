@@ -80,6 +80,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic) NSUInteger maxBufferSize;
 
+/**
+ Adds a callback at the end of a loop
+ */
+@property (nonatomic, copy) void(^loopCompletionBlock)(NSUInteger loopCountRemaining);
+
 @end
 
 
