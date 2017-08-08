@@ -1947,7 +1947,7 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
     _width = 0;
     _height = 0;
     _orientation = UIImageOrientationUp;
-    _loopCount = 0;
+    _loopCount = 1;
     dispatch_semaphore_wait(_framesLock, DISPATCH_TIME_FOREVER);
     _frames = nil;
     dispatch_semaphore_signal(_framesLock);
@@ -1979,7 +1979,15 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
                 CFDictionaryRef gif = CFDictionaryGetValue(properties, kCGImagePropertyGIFDictionary);
                 if (gif) {
                     CFTypeRef loop = CFDictionaryGetValue(gif, kCGImagePropertyGIFLoopCount);
-                    if (loop) CFNumberGetValue(loop, kCFNumberNSIntegerType, &_loopCount);
+                    if (loop) {
+                        NSUInteger metaLoopCount = 1; //it's 1 because CFNumberGetValue may failed
+                        Boolean loopCountNumberResult = CFNumberGetValue(loop, kCFNumberNSIntegerType, &metaLoopCount);
+                        if(!loopCountNumberResult || (loopCountNumberResult && metaLoopCount == 0)){
+                            _loopCount = 0;
+                        }else{
+                            _loopCount = metaLoopCount + 1;
+                        }
+                    }
                 }
                 CFRelease(properties);
             }
