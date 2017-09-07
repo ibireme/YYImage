@@ -8,6 +8,7 @@ Pod::Spec.new do |s|
   s.homepage     = 'https://github.com/ibireme/YYImage'
   s.platform     = :ios, '6.0'
   s.ios.deployment_target = '6.0'
+  s.tvos.deployment_target = "9.0"
   s.source       = { :git => 'https://github.com/ibireme/YYImage.git', :tag => s.version.to_s }
   
   s.requires_arc = true
@@ -17,7 +18,8 @@ Pod::Spec.new do |s|
     core.source_files = 'YYImage/*.{h,m}'
     core.public_header_files = 'YYImage/*.{h}'
     core.libraries = 'z'
-    core.frameworks = 'UIKit', 'CoreFoundation', 'QuartzCore', 'AssetsLibrary', 'ImageIO', 'Accelerate', 'MobileCoreServices'
+    core.tvos.frameworks = 'UIKit', 'CoreFoundation', 'QuartzCore', 'ImageIO', 'Accelerate', 'MobileCoreServices'
+    core.ios.frameworks = 'UIKit', 'CoreFoundation', 'QuartzCore', 'AssetsLibrary', 'ImageIO', 'Accelerate', 'MobileCoreServices'
   end
   
   s.subspec 'WebP' do |webp|
