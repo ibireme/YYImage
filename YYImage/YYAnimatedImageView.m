@@ -491,7 +491,7 @@ typedef NS_ENUM(NSUInteger, YYAnimatedImageType) {
     LOCK(
          bufferedImage = buffer[@(nextIndex)];
          if (bufferedImage) {
-             if ((int)_incrBufferCount < _totalFrameCount) {
+             if ((int)_incrBufferCount < (int)_totalFrameCount) {
                  [buffer removeObjectForKey:@(nextIndex)];
              }
              [self willChangeValueForKey:@"currentAnimatedImageIndex"];
