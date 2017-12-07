@@ -40,7 +40,7 @@ UIImageView *imageView = [[YYAnimatedImageView alloc] initWithImage:image];
 // Files: frame1.png, frame2.png, frame3.png
 NSArray *paths = @[@"/ani/frame1.png", @"/ani/frame2.png", @"/ani/frame3.png"];
 NSArray *times = @[@0.1, @0.2, @0.1];
-UIImage *image = [YYFrameImage alloc] initWithImagePaths:paths frameDurations:times repeats:YES];
+UIImage *image = [YYFrameImage alloc] initWithImagePaths:paths frameDurations:times loopCount:0];
 UIImageView *imageView = [YYAnimatedImageView alloc] initWithImage:image];
 [self.view addSubview:imageView];
 ```
@@ -234,7 +234,7 @@ UIImageView *imageView = [[YYAnimatedImageView alloc] initWithImage:image];
 // 文件: frame1.png, frame2.png, frame3.png
 NSArray *paths = @[@"/ani/frame1.png", @"/ani/frame2.png", @"/ani/frame3.png"];
 NSArray *times = @[@0.1, @0.2, @0.1];
-UIImage *image = [YYFrameImage alloc] initWithImagePaths:paths frameDurations:times repeats:YES];
+UIImage *image = [YYFrameImage alloc] initWithImagePaths:paths frameDurations:times loopCount:0];
 UIImageView *imageView = [YYAnimatedImageView alloc] initWithImage:image];
 [self.view addSubview:imageView];
 ```
