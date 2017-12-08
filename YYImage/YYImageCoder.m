@@ -1517,7 +1517,7 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
     
     UIImageOrientation _orientation;
     dispatch_semaphore_t _framesLock;
-    NSArray *_frames; ///< Array<GGImageDecoderFrame>, without image
+    NSArray *_frames; ///< Array<_YYImageDecoderFrame *>, without image
     BOOL _needBlend;
     NSUInteger _blendFrameIndex;
     CGContextRef _blendCanvas;
