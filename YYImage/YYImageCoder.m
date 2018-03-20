@@ -16,7 +16,9 @@
 #import <Accelerate/Accelerate.h>
 #import <QuartzCore/QuartzCore.h>
 #import <MobileCoreServices/MobileCoreServices.h>
+#if TARGET_OS_IOS
 #import <AssetsLibrary/AssetsLibrary.h>
+#endif
 #import <objc/runtime.h>
 #import <pthread.h>
 #import <zlib.h>
@@ -2793,6 +2795,7 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
 }
 
 - (void)yy_saveToAlbumWithCompletionBlock:(void(^)(NSURL *assetURL, NSError *error))completionBlock {
+#if TARGET_OS_IOS
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSData *data = [self _yy_dataRepresentationForSystem:YES];
         ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
@@ -2807,8 +2810,11 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
             }
         }];
     });
+#else
+    NSDictionary *userInfo = @{ NSLocalizedDescriptionKey : @"yy_saveToAlbumWithCompletionBlock failed: operation unavailable on Apple TV." };
+    completionBlock(nil, [NSError errorWithDomain:@"com.ibireme.webimage" code:-1 userInfo:userInfo]);
+#endif
 }
-
 - (NSData *)yy_imageDataRepresentation {
     return [self _yy_dataRepresentationForSystem:NO];
 }
