@@ -54,6 +54,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface YYImage : UIImage <YYAnimatedImage>
 
 + (nullable YYImage *)imageNamed:(NSString *)name; // no cache!
++ (nullable YYImage *)imageNamed:(NSString *)name inBundle:(NSBundle *)bundle;
 + (nullable YYImage *)imageWithContentsOfFile:(NSString *)path;
 + (nullable YYImage *)imageWithData:(NSData *)data;
 + (nullable YYImage *)imageWithData:(NSData *)data scale:(CGFloat)scale;
