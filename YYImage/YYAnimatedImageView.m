@@ -431,13 +431,13 @@ typedef NS_ENUM(NSUInteger, YYAnimatedImageType) {
 - (void)didReceiveMemoryWarning:(NSNotification *)notification {
     [_requestQueue cancelAllOperations];
     [_requestQueue addOperationWithBlock: ^{
-        _incrBufferCount = -60 - (int)(arc4random() % 120); // about 1~3 seconds to grow back..
-        NSNumber *next = @((_curIndex + 1) % _totalFrameCount);
+        self->_incrBufferCount = -60 - (int)(arc4random() % 120); // about 1~3 seconds to grow back..
+        NSNumber *next = @((self->_curIndex + 1) % self->_totalFrameCount);
         LOCK(
-             NSArray * keys = _buffer.allKeys;
+             NSArray * keys = self->_buffer.allKeys;
              for (NSNumber * key in keys) {
                  if (![key isEqualToNumber:next]) { // keep the next frame for smoothly animation
-                     [_buffer removeObjectForKey:key];
+                     [self->_buffer removeObjectForKey:key];
                  }
              }
         )//LOCK
@@ -577,20 +577,20 @@ typedef NS_ENUM(NSUInteger, YYAnimatedImageType) {
     if (currentAnimatedImageIndex >= _curAnimatedImage.animatedImageFrameCount) return;
     if (_curIndex == currentAnimatedImageIndex) return;
     
-    void (^block)() = ^{
+    void (^block)(void) = ^{
         LOCK(
-             [_requestQueue cancelAllOperations];
-             [_buffer removeAllObjects];
+             [self->_requestQueue cancelAllOperations];
+             [self->_buffer removeAllObjects];
              [self willChangeValueForKey:@"currentAnimatedImageIndex"];
-             _curIndex = currentAnimatedImageIndex;
+             self->_curIndex = currentAnimatedImageIndex;
              [self didChangeValueForKey:@"currentAnimatedImageIndex"];
-             _curFrame = [_curAnimatedImage animatedImageFrameAtIndex:_curIndex];
-             if (_curImageHasContentsRect) {
-                 _curContentsRect = [_curAnimatedImage animatedImageContentsRectAtIndex:_curIndex];
+             self->_curFrame = [self->_curAnimatedImage animatedImageFrameAtIndex:self->_curIndex];
+             if (self->_curImageHasContentsRect) {
+                 self->_curContentsRect = [self->_curAnimatedImage animatedImageContentsRectAtIndex:self->_curIndex];
              }
-             _time = 0;
-             _loopEnd = NO;
-             _bufferMiss = NO;
+             self->_time = 0;
+             self->_loopEnd = NO;
+             self->_bufferMiss = NO;
              [self.layer setNeedsDisplay];
         )//LOCK
     };
