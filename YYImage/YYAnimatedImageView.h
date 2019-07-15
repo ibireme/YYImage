@@ -80,6 +80,17 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic) NSUInteger maxBufferSize;
 
+/**
+ Indicate whether the manual time control is required. Default is NO. It is set by using initWithManualTimeControl: method.
+ */
+@property (nonatomic, readonly) BOOL isManualTimeControl;
+
+- (instancetype)initWithManualTimeControl:(BOOL)isManualTimeControl;
+/**
+ Pass an absolute time when isManualTimeControl = YES;
+ */
+- (void)onManualTimeAdvance:(NSTimeInterval)time;
+
 @end
 
 
