@@ -148,6 +148,7 @@ typedef NS_ENUM(NSUInteger, YYAnimatedImageType) {
     
     BOOL _isPausedInManualTimeControl;
     BOOL _isManualTimeControl;
+    NSTimeInterval _lastManualTime; ///< last time when manualTimeAdvance was called
 }
 @property (nonatomic, readwrite) BOOL currentIsPlayingAnimation;
 - (void)calcMaxBufferCount;
@@ -575,7 +576,9 @@ typedef NS_ENUM(NSUInteger, YYAnimatedImageType) {
     
     NSTimeInterval delay = 0;
     if (!_bufferMiss) {
-        _time = time;
+        NSTimeInterval timeSinceLastManualTime = time - _lastManualTime;
+        _lastManualTime = time;
+        _time += timeSinceLastManualTime;
         delay = [image animatedImageDurationAtIndex:_curIndex];
         if (_time < delay) return;
         _time -= delay;
