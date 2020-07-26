@@ -23,7 +23,6 @@
 		D9A9954B1F0564D40062698B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A995441F0564B70062698B /* Accelerate.framework */; };
 		D9A9954C1F0564D40062698B /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A995431F0564B20062698B /* ImageIO.framework */; };
 		D9A9954D1F0564D40062698B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A995421F0564AF0062698B /* MobileCoreServices.framework */; };
-		D9A9954E1F0564D40062698B /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A995411F0564A70062698B /* AssetsLibrary.framework */; };
 		D9A9954F1F0564D40062698B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A995401F05649B0062698B /* libz.tbd */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +60,6 @@
 				D9A9954B1F0564D40062698B /* Accelerate.framework in Frameworks */,
 				D9A9954C1F0564D40062698B /* ImageIO.framework in Frameworks */,
 				D9A9954D1F0564D40062698B /* MobileCoreServices.framework in Frameworks */,
-				D9A9954E1F0564D40062698B /* AssetsLibrary.framework in Frameworks */,
 				D9A9954F1F0564D40062698B /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
