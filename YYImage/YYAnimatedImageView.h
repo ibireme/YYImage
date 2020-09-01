@@ -80,6 +80,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic) NSUInteger maxBufferSize;
 
+@property (nonatomic) BOOL alwaysInfiniteLoop;
+
 @end
 
 
