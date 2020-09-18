@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.homepage     = 'https://github.com/ibireme/YYImage'
   s.platform     = :ios, '6.0'
   s.ios.deployment_target = '6.0'
-  s.source       = { :git => 'https://github.com/ibireme/YYImage.git', :tag => s.version.to_s }
+  s.source       = { :git => 'https://github.com/QiuYeHong90/YYImage.git', :tag => s.version.to_s }
   
   s.requires_arc = true
   s.default_subspec = 'Core'
