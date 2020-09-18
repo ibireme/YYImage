@@ -15,6 +15,7 @@ Image framework for iOS to display/encode/decode animated WebP, APNG, GIF, and m
 
 Features
 ==============
+- 最近更新修复图片加载不出来，兼容iOS 14
 - Display/encode/decode animated image with these types:<br/>&nbsp;&nbsp;&nbsp;&nbsp;WebP, APNG, GIF.
 - Display/encode/decode still image with these types:<br/>&nbsp;&nbsp;&nbsp;&nbsp;WebP, PNG, GIF, JPEG, JP2, TIFF, BMP, ICO, ICNS.
 - Baseline/progressive/interlaced image decode with these types:<br/>&nbsp;&nbsp;&nbsp;&nbsp;PNG, GIF, JPEG, BMP.

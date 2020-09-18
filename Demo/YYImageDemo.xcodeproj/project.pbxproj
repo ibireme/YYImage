@@ -44,6 +44,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A11E94612514C2C500D4033C /* YYImage.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = YYImage.podspec; path = ../YYImage.podspec; sourceTree = "<group>"; };
+		A11E94622514C2CB00D4033C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		D91A602C1F057230008CD5D3 /* YYImageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYImageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D91A602F1F057230008CD5D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = YYImageDemo/AppDelegate.h; sourceTree = "<group>"; };
 		D91A60301F057230008CD5D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = YYImageDemo/AppDelegate.m; sourceTree = "<group>"; };
@@ -171,6 +173,8 @@
 		D97F40891F0573DA00DFD481 /* YYImage */ = {
 			isa = PBXGroup;
 			children = (
+				A11E94622514C2CB00D4033C /* README.md */,
+				A11E94612514C2C500D4033C /* YYImage.podspec */,
 				D97F408A1F0573DA00DFD481 /* YYAnimatedImageView.h */,
 				D97F408B1F0573DA00DFD481 /* YYAnimatedImageView.m */,
 				D97F408C1F0573DA00DFD481 /* YYFrameImage.h */,
