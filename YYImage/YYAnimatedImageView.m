@@ -526,8 +526,14 @@ typedef NS_ENUM(NSUInteger, YYAnimatedImageType) {
 }
 
 - (void)displayLayer:(CALayer *)layer {
-    if (_curFrame) {
-        layer.contents = (__bridge id)_curFrame.CGImage;
+    //on iOS 13: If we override this, UIKit will render the UIImageView.image itself before calling this method. So even if self.currentFrame == nil, the UIImageView.image get rendered.
+    //on iOS 14: UIKit no longer render anything if you override that displayLayer: method. We can have a backup to render layer.contents for this case by ourself.
+    UIImage *currentFrame = _curFrame;
+    if (!currentFrame) {
+        currentFrame = self.image;
+    }
+    if (currentFrame) {
+        layer.contents = (__bridge id)currentFrame.CGImage;
     }
 }
 
