@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B09C1B4E254A7FF500BA7622 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B09C1B4D254A7FF500BA7622 /* CoreServices.framework */; };
 		D9A995351F05644B0062698B /* YYAnimatedImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = D9A9952B1F05644A0062698B /* YYAnimatedImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D9A995361F05644B0062698B /* YYAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A9952C1F05644A0062698B /* YYAnimatedImageView.m */; };
 		D9A995371F05644B0062698B /* YYFrameImage.h in Headers */ = {isa = PBXBuildFile; fileRef = D9A9952D1F05644A0062698B /* YYFrameImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -22,11 +23,11 @@
 		D9A9954A1F0564D40062698B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A995451F0564BB0062698B /* QuartzCore.framework */; };
 		D9A9954B1F0564D40062698B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A995441F0564B70062698B /* Accelerate.framework */; };
 		D9A9954C1F0564D40062698B /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A995431F0564B20062698B /* ImageIO.framework */; };
-		D9A9954D1F0564D40062698B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A995421F0564AF0062698B /* MobileCoreServices.framework */; };
 		D9A9954F1F0564D40062698B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A995401F05649B0062698B /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B09C1B4D254A7FF500BA7622 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreServices.framework; sourceTree = DEVELOPER_DIR; };
 		D9A9951F1F0564180062698B /* YYImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YYImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9A995231F0564180062698B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9A9952B1F05644A0062698B /* YYAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYAnimatedImageView.h; sourceTree = "<group>"; };
@@ -59,8 +60,8 @@
 				D9A9954A1F0564D40062698B /* QuartzCore.framework in Frameworks */,
 				D9A9954B1F0564D40062698B /* Accelerate.framework in Frameworks */,
 				D9A9954C1F0564D40062698B /* ImageIO.framework in Frameworks */,
-				D9A9954D1F0564D40062698B /* MobileCoreServices.framework in Frameworks */,
 				D9A9954F1F0564D40062698B /* libz.tbd in Frameworks */,
+				B09C1B4E254A7FF500BA7622 /* CoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +106,7 @@
 		D9A9953F1F05649B0062698B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B09C1B4D254A7FF500BA7622 /* CoreServices.framework */,
 				D9A995471F0564C40062698B /* UIKit.framework */,
 				D9A995461F0564BF0062698B /* CoreFoundation.framework */,
 				D9A995451F0564BB0062698B /* QuartzCore.framework */,
@@ -160,7 +162,7 @@
 		D9A995161F0564180062698B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1210;
 				ORGANIZATIONNAME = ibireme;
 				TargetAttributes = {
 					D9A9951E1F0564180062698B = {
@@ -174,6 +176,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = D9A995151F0564180062698B;
 			productRefGroup = D9A995201F0564180062698B /* Products */;
@@ -225,13 +228,18 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -258,7 +266,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -281,13 +289,18 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -308,7 +321,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

@@ -15,7 +15,7 @@
 #import <ImageIO/ImageIO.h>
 #import <Accelerate/Accelerate.h>
 #import <QuartzCore/QuartzCore.h>
-#import <MobileCoreServices/MobileCoreServices.h>
+#import <CoreServices/CoreServices.h>
 //#import <AssetsLibrary/AssetsLibrary.h>
 #import <objc/runtime.h>
 #import <pthread.h>
