@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   
   s.subspec 'WebP' do |webp|
     webp.dependency 'YYImage/Core'
-    webp.ios.vendored_frameworks = 'Vendor/WebP.xcframework', 'Vendor/WebPDecoder.xcframework', 'Vendor/WebPDemux.xcframework', 'Vendor/WebPMux.xcframework'
+    webp.ios.vendored_frameworks = 'Vendor/WebP.framework', 'Vendor/WebPDecoder.framework', 'Vendor/WebPDemux.framework', 'Vendor/WebPMux.framework'
   end
 
   s.subspec 'libwebp' do |libwebp|
