@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
     core.public_header_files = 'YYImage/*.{h}'
     core.libraries = 'z'
     core.frameworks = 'UIKit', 'CoreFoundation', 'QuartzCore', 'ImageIO', 'Accelerate', 'CoreServices'
-    core.dependency = 'libwebp'
+    core.dependency 'libwebp'
     core.xcconfig = {   
       'USER_HEADER_SEARCH_PATHS' => '$(inherited) $(SRCROOT)/libwebp/src'
     }    
