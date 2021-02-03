@@ -18,6 +18,10 @@ Pod::Spec.new do |s|
     core.public_header_files = 'YYImage/*.{h}'
     core.libraries = 'z'
     core.frameworks = 'UIKit', 'CoreFoundation', 'QuartzCore', 'ImageIO', 'Accelerate', 'CoreServices'
+    core.dependency = 'libwebp'
+    core.xcconfig = {   
+      'USER_HEADER_SEARCH_PATHS' => '$(inherited) $(SRCROOT)/libwebp/src'
+    }    
   end
   
   s.subspec 'WebP' do |webp|
@@ -25,12 +29,13 @@ Pod::Spec.new do |s|
     webp.ios.vendored_frameworks = 'Vendor/WebP.framework', 'Vendor/WebPDecoder.framework', 'Vendor/WebPDemux.framework', 'Vendor/WebPMux.framework'
   end
 
-  s.subspec 'libwebp' do |libwebp|
-    libwebp.dependency 'YYImage/Core'
-    libwebp.dependency 'libwebp'
-    libwebp.xcconfig = { 
-      'USER_HEADER_SEARCH_PATHS' => '$(inherited) $(SRCROOT)/libwebp/src'
-    }
-  end
+#  s.subspec 'libwebp' do |libwebp|
+#    libwebp.dependency 'YYImage/Core'
+#    libwebp.dependency 'libwebp'
+#    libwebp.xcconfig = { 
+#      'USER_HEADER_SEARCH_PATHS' => '$(inherited) $(SRCROOT)/libwebp/src'
+#    }
+#  end
+
   
 end
