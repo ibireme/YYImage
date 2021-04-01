@@ -525,9 +525,15 @@ typedef NS_ENUM(NSUInteger, YYAnimatedImageType) {
     }
 }
 
+// fixme timo iOS 14 workaround from here: https://github.com/ibireme/YYImage/issues/149#issuecomment-667085934
 - (void)displayLayer:(CALayer *)layer {
     if (_curFrame) {
         layer.contents = (__bridge id)_curFrame.CGImage;
+    } else {
+        // If we have no animation frames, call super implementation. iOS 14+ UIImageView use this delegate method for rendering.
+        if ([UIImageView instancesRespondToSelector:@selector(displayLayer:)]) {
+            [super displayLayer:layer];
+        }
     }
 }
 
