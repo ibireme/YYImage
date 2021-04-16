@@ -1136,6 +1136,8 @@ YYImageType YYImageDetectType(CFDataRef data) {
     // JP2
     if (memcmp(bytes + 4, "\152\120\040\040\015", 5) == 0) return YYImageTypeJPEG2000;
     
+    if (memcmp(bytes + 4, "ftypheic", 8) == 0) return YYImageTypeHEIC;
+    
     return YYImageTypeUnknown;
 }
 
@@ -1182,6 +1184,7 @@ NSString *YYImageTypeGetExtension(YYImageType type) {
         case YYImageTypeGIF: return @"gif";
         case YYImageTypePNG: return @"png";
         case YYImageTypeWebP: return @"webp";
+        case YYImageTypeHEIC: return @"heic";
         default: return nil;
     }
 }
@@ -2342,7 +2345,8 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
 
     switch (type) {
         case YYImageTypeJPEG:
-        case YYImageTypeJPEG2000: {
+        case YYImageTypeJPEG2000:
+        case YYImageTypeHEIC: {
             _quality = 0.9;
         } break;
         case YYImageTypeTIFF:
@@ -2399,6 +2403,7 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
         case YYImageTypeBMP:
         case YYImageTypeICO:
         case YYImageTypeICNS:
+        case YYImageTypeHEIC:
         case YYImageTypeGIF: {
             return _images.count > 0;
         } break;
