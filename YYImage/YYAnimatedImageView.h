@@ -85,6 +85,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, readonly) BOOL isManualTimeControl;
 
+/**
+ Show first frame immediately without delay first frame's duration
+ */
+@property (nonatomic) BOOL showContentImmediately;
+
 - (instancetype)initWithManualTimeControl:(BOOL)isManualTimeControl;
 /**
  Pass an absolute time when isManualTimeControl = YES;

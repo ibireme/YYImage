@@ -204,6 +204,7 @@ typedef NS_ENUM(NSUInteger, YYAnimatedImageType) {
     self = [super init];
     _runloopMode = NSRunLoopCommonModes;
     _autoPlayAnimatedImage = YES;
+    _showContentImmediately = YES;
     return self;
 }
 
@@ -211,6 +212,7 @@ typedef NS_ENUM(NSUInteger, YYAnimatedImageType) {
     self = [super initWithFrame:frame];
     _runloopMode = NSRunLoopCommonModes;
     _autoPlayAnimatedImage = YES;
+    _showContentImmediately = YES;
     return self;
 }
 
@@ -218,6 +220,7 @@ typedef NS_ENUM(NSUInteger, YYAnimatedImageType) {
     self = [super init];
     _runloopMode = NSRunLoopCommonModes;
     _autoPlayAnimatedImage = YES;
+    _showContentImmediately = YES;
     self.frame = (CGRect) {CGPointZero, image.size };
     self.image = image;
     return self;
@@ -227,6 +230,7 @@ typedef NS_ENUM(NSUInteger, YYAnimatedImageType) {
     self = [super init];
     _runloopMode = NSRunLoopCommonModes;
     _autoPlayAnimatedImage = YES;
+    _showContentImmediately = YES;
     CGSize size = image ? image.size : highlightedImage.size;
     self.frame = (CGRect) {CGPointZero, size };
     self.image = image;
@@ -505,7 +509,9 @@ typedef NS_ENUM(NSUInteger, YYAnimatedImageType) {
     NSTimeInterval delay = 0;
     if (!_bufferMiss) {
         _time += link.duration;
-        delay = [image animatedImageDurationAtIndex:_curIndex];
+        if (self.showContentImmediately && (_curIndex != 0 || _buffer.count != 0)) { // if buffer is empty and curIndex is 0, no need delay to show first frame
+            delay = [image animatedImageDurationAtIndex:_curIndex];
+        }
         if (_time < delay) return;
         _time -= delay;
         if (nextIndex == 0) {
