@@ -22,15 +22,7 @@ Pod::Spec.new do |s|
   
   s.subspec 'WebP' do |webp|
     webp.dependency 'YYImage/Core'
-    webp.ios.vendored_frameworks = 'Vendor/WebP.framework'
-  end
-
-  s.subspec 'libwebp' do |libwebp|
-    libwebp.dependency 'YYImage/Core'
-    libwebp.dependency 'libwebp'
-    libwebp.xcconfig = { 
-      'USER_HEADER_SEARCH_PATHS' => '$(inherited) $(SRCROOT)/libwebp/src'
-    }
+    webp.ios.vendored_frameworks = 'Vendor/*.xcframework'
   end
   
 end
