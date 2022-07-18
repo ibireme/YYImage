@@ -15,6 +15,7 @@ Image framework for iOS to display/encode/decode animated WebP, APNG, GIF, and m
 
 Features
 ==============
+- 最近更新修复图片加载不出来，兼容iOS 14
 - Display/encode/decode animated image with these types:<br/>&nbsp;&nbsp;&nbsp;&nbsp;WebP, APNG, GIF.
 - Display/encode/decode still image with these types:<br/>&nbsp;&nbsp;&nbsp;&nbsp;WebP, PNG, GIF, JPEG, JP2, TIFF, BMP, ICO, ICNS.
 - Baseline/progressive/interlaced image decode with these types:<br/>&nbsp;&nbsp;&nbsp;&nbsp;PNG, GIF, JPEG, BMP.
@@ -138,7 +139,7 @@ Installation
 ### CocoaPods
 
 1. Update cocoapods to the latest version.
-2. Add `pod 'YYImage'` to your Podfile.
+2. Add `pod 'YYImage', :git => 'https://github.com/QiuYeHong90/YYImage.git'` to your Podfile.
 3. Run `pod install` or `pod update`.
 4. Import \<YYImage/YYImage.h\>.
 5. Notice: it doesn't include WebP subspec by default, if you want to support WebP format, you may add `pod 'YYImage/WebP'` to your Podfile.
